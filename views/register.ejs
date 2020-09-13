@@ -1,0 +1,26 @@
+<%- include('partials/header'); -%>
+<div class="container">
+    <h1 style="text-align: center;">SIGN-UP</h1>
+    <!-- form data is included in the body of form and sent to action  -->
+    <div style="width: 30%;margin:30px auto;">
+        <form action="/register" method="POST">
+            <div class="form-group">
+                <!--for spacing-->
+                <input type="text" name="username" placeholder="UserName" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="text" name="password" placeholder="Password" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <button class="btn-large btn-dark btn-block">Submit!</button>
+                <!--btn-block to make button acquire while length-->
+            </div>
+
+        </form>
+    </div>
+
+</div>
+<%- include('partials/footer'); -%>
+
+//use username (instead of name)everywhere in schema and in the logic of creating a new user

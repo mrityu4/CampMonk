@@ -1,0 +1,36 @@
+<%- include('partials/header'); -%>
+<div class="container">
+  <header class="jumbotron">
+    <div class="container">
+      <h1>Camp Monk</h1>
+      <p>
+        Welcome to our collection of hand-picked campsites from all over the
+        world
+      </p>
+      <p>
+        <a href="/campgrounds/new" class="btn btn-primary btn-lg">Create New</a>
+      </p>
+    </div>
+  </header>
+  <!-- https://stackoverflow.com/questions/59106739/syntaxerror-unexpected-indentifier-while-compiling-ejs-problem -->
+  <div class="row text-center thumbnails" style="display: flex; flex-wrap: wrap">
+    <% camps.forEach(function(camp){ %>
+
+    <div class="col-md-4 col-sm-6">
+      <div class="img-fluid">
+        <img src="<%=camp.url%>" alt="" class="img-thumbnail" />
+      </div>
+
+      <div class="caption">
+        <h4><%=camp.name%></h4>
+      </div>
+      <div class="caption">
+        <button>
+          <a href="/campgrounds/<%=camp._id%>   ">More Info</a>
+        </button>
+      </div>
+
+    </div>
+    <% }); %> <%- include('partials/footer'); -%>
+  </div>
+</div>

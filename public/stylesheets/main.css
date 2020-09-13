@@ -1,0 +1,9 @@
+body > div > div > div.col-md-9 > div.img-thumbnail > img{
+    width: 100%;
+}
+.img-thumbnail{
+    padding: 0;
+}
+body > div > div > div.col-md-9 > div.img-thumbnail > div {
+    padding: 9px;
+}
