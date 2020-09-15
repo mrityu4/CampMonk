@@ -7,3 +7,6 @@ body > div > div > div.col-md-9 > div.img-thumbnail > img{
 body > div > div > div.col-md-9 > div.img-thumbnail > div {
     padding: 9px;
 }
+#delete-button-camp{
+    display:inline;
+}
