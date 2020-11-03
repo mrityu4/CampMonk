@@ -38,8 +38,8 @@ router.put("/campgrounds/:id/comments/:comment_id", isWriter, function (req, res
 
 
 //COMMENT DELETE ROUTE
-router.delete("/campgrounds/:id/comments/:comment_id", function (req, res) {
-    Comment.findByIdAndRemove(req.params.comment_id, isWriter, function (err) {
+router.delete("/campgrounds/:id/comments/:comment_id",isWriter, function (req, res) {
+    Comment.findByIdAndRemove(req.params.comment_id, function (err) {
         if (err) console.log(err);
         else res.redirect("/campgrounds/" + req.params.id);
     });
